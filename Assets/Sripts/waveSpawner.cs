@@ -13,7 +13,7 @@ public class waveSpawner : MonoBehaviour
     private float countdown = 2f;
     private int waveIndex=0;
     private int enemiesINwave=1;
-    private int maxWaves = 5;
+    private int maxWaves = 10;
 
     public Text waveCoutndownText;
     public Text waveNumberText;

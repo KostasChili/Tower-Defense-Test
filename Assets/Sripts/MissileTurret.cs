@@ -27,12 +27,13 @@ public class MissileTurret : MonoBehaviour
      void Start()
     {
         InvokeRepeating("updateTarget", 0f, 0.5f);
+        Target = null;
     }
 
 
     void updateTarget()
     {
-        GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] enemyList = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject closestEnemy = null;
 
@@ -57,6 +58,9 @@ public class MissileTurret : MonoBehaviour
 
      void Update()
     {
+        if (Target == null)
+            return;
+
         Vector3 directiontoTarget = Target.position - transform.position;
         Quaternion baseRot = Quaternion.LookRotation(directiontoTarget);
         Vector3 horizontalRotation = Quaternion.Lerp(baseRotation.rotation, baseRot, Time.deltaTime * rotspeed).eulerAngles;
@@ -79,5 +83,12 @@ public class MissileTurret : MonoBehaviour
     void shoot()
     {
         GameObject missileGo = (GameObject)Instantiate(missile, barrel.position, barrel.rotation);
+        missile rocket = missileGo.GetComponent<missile>();
+        if(rocket!=null)
+        {
+            rocket.Seek(Target);
+        }
+       
+           
     }
 }

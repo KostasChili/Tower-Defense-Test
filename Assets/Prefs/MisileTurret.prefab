@@ -168,15 +168,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b478df04c9607db45b50d57cb9ad6a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
+  Target: {fileID: 9184938127751481630, guid: 0910fff481e006d4fb7d3da38a819700, type: 3}
   range: 10
   fireRate: 0.3
   enemyTag: Enemy
-  rotspeed: 2
+  rotspeed: 5.51
   baseRotation: {fileID: 5302151922666413545}
   weapongRotation: {fileID: 5568859294990567578}
   barrel: {fileID: 1322429140385940451}
-  missile: {fileID: 8186319685309280103, guid: 0910fff481e006d4fb7d3da38a819700, type: 3}
+  missile: {fileID: 1032067663745666907, guid: df1e846fa903da74da854cb033b2e6e1, type: 3}
 --- !u!1 &3941270546446628967
 GameObject:
   m_ObjectHideFlags: 0

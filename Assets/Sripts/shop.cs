@@ -5,9 +5,9 @@ public class shop : MonoBehaviour
 
     buildManager buildManager;
 
-     void Start()
+    void Start()
     {
-        buildManager = buildManager.instance; 
+        buildManager = buildManager.instance;
     }
     public void buyStandardTurret()
     {
@@ -21,5 +21,10 @@ public class shop : MonoBehaviour
         buildManager.SetTurretToBuild(buildManager.missileTurretPrefab);
     }
 
+    public void buyBonkTurret()
+    {
+        Debug.Log("bonkturret bought");
+        buildManager.SetTurretToBuild(buildManager.bonkTurretPrefab);
+    }
 
 }
